@@ -19,14 +19,19 @@ namespace Grades
             book.Name = "Matt's Grade Book";
             book.AddGrade(88f);
             book.AddGrade(87f);
-            book.AddGrade(50f);
+            book.AddGrade(90f);
+
+            book.WriteGrade(Console.Out);
 
             GradeStatistics stats = book.ComputeStatistics();
 
             book.Name = "Whatever";
+            book.Name = "";
             Console.WriteLine(stats.AverageGrade);
             Console.WriteLine(stats.HighestGrade);
             Console.WriteLine(stats.LowestGrade);
+            Console.WriteLine("Your letter grade is {0}", stats.LetterGrade);
+            Console.WriteLine("Your grades are {0}", stats.Description);
         }
 
         private static void OnAddGrade(object sender, AddGradeEventArgs args)

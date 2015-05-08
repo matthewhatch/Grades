@@ -3,3 +3,5 @@ C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\bin\Debug\Gr
 C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\obj\Debug\Grades.exe
 C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\obj\Debug\Grades.pdb
 C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\obj\Debug\Grades.csprojResolveAssemblyReference.cache
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\bin\Debug\Grades.exe.CodeAnalysisLog.xml
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades\bin\Debug\Grades.exe.lastcodeanalysissucceeded

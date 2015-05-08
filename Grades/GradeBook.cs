@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 
 namespace Grades
@@ -10,7 +11,7 @@ namespace Grades
         public GradeBook(string name = "No Name")
         {
             _name = name;
-            grades = new List<float>();
+            _grades = new List<float>();
         }
 
         public void AddGrade(float grade)
@@ -24,7 +25,16 @@ namespace Grades
 
             if (grade >= 0 && grade <= 100)
             {
-                grades.Add(grade);
+                _grades.Add(grade);
+            }
+        }
+
+        public void WriteGrade(TextWriter textWriter)
+        {
+            textWriter.WriteLine("Writing grades");
+            foreach (float grade in _grades)
+            {
+                textWriter.WriteLine(grade);
             }
         }
 
@@ -34,14 +44,14 @@ namespace Grades
             GradeStatistics stats = new GradeStatistics();
             float sum = 0f;
             
-            foreach (float grade in grades) 
+            foreach (float grade in _grades) 
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
                 sum += grade;
             }
 
-            stats.AverageGrade = sum / grades.Count;
+            stats.AverageGrade = sum / _grades.Count;
             return stats;
         }
 
@@ -53,6 +63,10 @@ namespace Grades
             }
             set
             {
+                if (String.IsNullOrEmpty(value)) {
+                    throw new ArgumentException("Name cannot be null or empty");    
+                }
+
                 if (_name != value) 
                 {
                     var oldValue = _name;
@@ -72,7 +86,9 @@ namespace Grades
         public event CalculatingDelegate Calculating;
         public event AddGradeDelegate AddingGrade;
         private string _name;
-        private List<float> grades;
+        private List<float> _grades;
 
+
+        
     }
 }
