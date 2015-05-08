@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatingDelegate.cs" />
+    <Compile Include="CalculatingEventArgs.cs" />
     <Compile Include="GradeBook.cs" />
     <Compile Include="GradeStatistics.cs" />
     <Compile Include="NameChangedDelegate.cs" />

@@ -15,6 +15,13 @@ namespace Grades
 
         public void AddGrade(float grade)
         {
+            if (AddingGrade != null) 
+            {
+                AddGradeEventArgs args = new AddGradeEventArgs();
+                args.Grade = grade;
+                AddingGrade(this,args);
+            }
+
             if (grade >= 0 && grade <= 100)
             {
                 grades.Add(grade);
@@ -23,6 +30,7 @@ namespace Grades
 
         public GradeStatistics ComputeStatistics()
         {
+            if(Calculating != null)Calculating(this);
             GradeStatistics stats = new GradeStatistics();
             float sum = 0f;
             
@@ -61,6 +69,8 @@ namespace Grades
         }
 
         public event NameChangedDelegate NameChanged;
+        public event CalculatingDelegate Calculating;
+        public event AddGradeDelegate AddingGrade;
         private string _name;
         private List<float> grades;
 
