@@ -1,0 +1,7 @@
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\bin\Debug\Grades.Tests.dll
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\bin\Debug\Grades.Tests.pdb
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.csprojResolveAssemblyReference.cache
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.dll
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.pdb
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\bin\Debug\Grades.exe
+C:\Users\hatchm\Documents\Visual Studio 2012\Projects\Grades\Grades.Tests\bin\Debug\Grades.pdb
